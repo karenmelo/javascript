@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelo</title>
+
+    <style>
+      /* mesma especificidade inicio */
+      h1 {
+        background: red;
+      }
+      h1 {
+        background: blue;
+      }
+      /* mesma especificidade fim */
+
+      /* o id tem maior especificidade sobre os elementos html e class */
+      /* #cabecalho-dois {
+        background: purple;
+      }*/
+
+      /* para a classe sobrepor o id é necessário incluir ao lado do atributo css o !important (mas não é indicado usá-lo) */
+      .fundo-vermelho {
+        background: brown;
+      }
+
+      .bold {
+        color: pink;
+      }
+      .bold {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="cabecalho-um" class="fundo-vermelho borda-esquedar">
+      Vai vir aqui
+    </h1>
+    <h1 id="cabecalho-dois" class="fundo-vermelho">Vai vir aqui</h1>
+    <p>Um texto <b class="bold">qualquer</b>.</p>
+    <p>Um texto <b class="bold">qualquer</b>.</p>
+    <p>Um texto <b class="bold">qualquer</b>.</p>
+  </body>
+</html>
